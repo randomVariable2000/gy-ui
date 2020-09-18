@@ -1,0 +1,53 @@
+---
+name: Switch 开关
+route: /Switch
+menu: 组件
+---
+import { Playground } from 'docz'
+import Switch from './switch'
+import './style'
+import ToggleDemoCode from '!raw-loader!./demo/toggle.tsx';
+import { HappyBox } from '../../doc-comps';
+import Toggle from './demo/toggle.tsx'
+
+# Switch 开关
+
+开关
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <Switch/>
+</Playground>
+
+<Playground>
+    <Switch onClick={()=>{alert('hi')}}/>
+</Playground>
+
+<Playground>
+    <Switch
+        checkedChildren="开"
+        unCheckedChildren="关"
+    />
+</Playground>
+
+<Playground>
+    <Switch
+        checkedChildren="开"
+        unCheckedChildren="关"
+        disabled={true}
+    />
+</Playground>
+
+<HappyBox code={ToggleDemoCode} title="基本用法" desc="使用kind控制Alert类型">
+  <Toggle/>
+</HappyBox>
+
+
+## API
+
+| 属性 | 说明     | 类型                                         | 默认值 |
+| ---- | -------- | -------------------------------------------- | ------ |
+| kind | 警告类型 | 'info'/'positive'/'negative'/'warning'非必填 | 'info' |
