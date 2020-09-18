@@ -1,6 +1,11 @@
 {
     "compilerOptions": {
       "baseUrl": "./",
+      "paths": {
+          "gy-ui": ["components/index.ts"],
+          "gy-ui/esm/*": ["components/*"],
+          "gy-ui/lib/*": ["components/*"]
+      },
       "target": "esnext",
       "module": "commonjs",
       "jsx": "react",
@@ -14,4 +19,4 @@
     },
     "include": ["components", "global.d.ts"],
     "exclude": ["node_modules"]
-  }
+}

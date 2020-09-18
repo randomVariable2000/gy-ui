@@ -1,19 +1,19 @@
 import React from 'react';
 import t from 'prop-types';
 
-import {AlertProps, KindMap} from './interface'
+import { AlertProps, KindMap } from './interface';
 
-const prefixCls = 'happy-alert';
+const prefixCls = 'gy-alert';
 
 const kinds: KindMap = {
-    info: '#5352ED',
-    positive: '#2ED573',
-    negative: '#FF4757',
-    warning:'#FFA502',
-}
+  info: '#3B4A3D',
+  positive: '#A9F5F2',
+  negative: '#FE2E2E',
+  warning: '#FFA502',
+};
 
-const Alert: React.FC<AlertProps> = ({children, kind = 'info', ...rest}) =>{
-    return <div
+const Alert: React.FC<AlertProps> = ({ children, kind = 'info', ...rest }) => (
+  <div
     className={prefixCls}
     style={{
       background: kinds[kind],
@@ -22,10 +22,10 @@ const Alert: React.FC<AlertProps> = ({children, kind = 'info', ...rest}) =>{
   >
     {children}
   </div>
-}
+);
 
 Alert.propTypes = {
-    kind: t.oneOf(['info', 'positive', 'negative', 'warning'])
+  kind: t.oneOf(['info', 'positive', 'negative', 'warning']),
 };
 
 export default Alert;

@@ -1,0 +1,28 @@
+---
+name: Icon 图标
+route: /Icon
+menu: 组件
+---
+import { Playground } from 'docz'
+import Icon from './icon'; // 引入组件 import './style'; // 引入组件样式
+import IconPre from './iconPre';
+
+# Icon 图标
+
+警告提示，展现需要关注的信息。
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <Icon type='md-home' style={{color: '#51b26d', fontSize: 27}}></Icon>
+</Playground>
+
+<IconPre/>
+
+## API
+
+| 属性 | 说明     | 类型                                         | 默认值 |
+| ---- | -------- | -------------------------------------------- | ------ |
+| kind | 警告类型 | 'info'/'positive'/'negative'/'warning'非必填 | 'info' |
