@@ -2,7 +2,7 @@ export interface gyIconProps{
     type?:string;
     svg?:string;
     className?:string;
-    style?:any
+    style?:React.CSSProperties;
 }
 
 export interface gyIconState{

@@ -28,7 +28,7 @@ export const HappyBox: React.FC<Props> = ({ code, title, desc, children }) => {
       <section className="code-box-demo"> {children}</section>
       <section className="code-box-meta">
         <div className="text-divider">
-          <span>{title || '示例'}</span>
+          <span>{title || ''}</span>
         </div>
         <div className="code-box-description">
           <p>{desc || '暂无描述'}</p>

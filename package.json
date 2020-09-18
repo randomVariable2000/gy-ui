@@ -74,6 +74,7 @@
   "dependencies": {
     "archer-svgs": "^0.2.5",
     "classnames": "^2.2.6",
+    "omit": "^1.0.1",
     "prop-types": "^15.7.2",
     "rc-switch": "^3.2.1"
   }

@@ -1,0 +1,61 @@
+---
+name: Button 按钮
+route: /Button
+menu: 组件
+---
+import { Playground } from 'docz'
+import Button from './button'; // 引入组件 import './style'; // 引入组件样式
+import './style'
+import loadingDelayDemoCode from '!raw-loader!./demo/loadingDelay.tsx';
+import { HappyBox } from '../../doc-comps';
+import LoadingDelay from './demo/loadingDelay.tsx'
+
+# Button 按钮
+
+按钮
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <Button>按钮</Button>
+</Playground>
+
+<Playground>
+    <Button type="primary">按钮</Button>
+    <Button type="danger">按钮</Button>
+    <Button type="dashed">按钮</Button>
+    <Button size="small">按钮</Button>
+    <Button size="large">按钮</Button>
+</Playground>
+
+<Playground>
+    <Button shape="circle">按钮</Button>
+</Playground>
+
+<Playground>
+    <Button loading>按钮</Button>
+</Playground>
+
+<Playground>
+    <div style={{backgroundColor:'#ccc'}}>
+        <Button type="ghost" >按钮</Button>
+    </div>
+</Playground>
+
+<Playground>
+    <Button icon="ios-arrow-dropdown" >Click me!</Button>
+    <Button icon="ios-arrow-dropdown" ></Button>
+</Playground>
+
+<HappyBox code={loadingDelayDemoCode} title='' desc="按钮控制时间">
+  <LoadingDelay/>
+</HappyBox>
+
+
+## API
+
+| 属性 | 说明     | 类型                                         | 默认值 |
+| ---- | -------- | -------------------------------------------- | ------ |
+| kind | 警告类型 | 'info'/'positive'/'negative'/'warning'非必填 | 'info' |
