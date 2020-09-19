@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\KZJ\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/omit
+  C:\Program Files\nodejs\node.exe C:\Users\KZJ\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add rc-check
 
 PATH: 
   C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs;C:\Program Files (x86)\Vim\vim82;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-9.0.4\bin;C:\Program Files\Java\jre-9.0.4\bin;C:\Users\KZJ\AppData\Roaming\npm\node_modules\yarn\bin;C:\Users\KZJ\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\KZJ\AppData\Local\Programs\Python\Python37-32\;C:\Users\KZJ\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\KZJ\AppData\Local\Programs\Microsoft VS Code\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fomit: Not found
+  Error: https://registry.yarnpkg.com/rc-check: Not found
       at Request.params.callback [as _callback] (C:\Users\KZJ\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
       at Request.self.callback (C:\Users\KZJ\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
       at Request.emit (events.js:223:5)

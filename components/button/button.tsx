@@ -5,7 +5,7 @@ import Icon from '../icon';
 
 import {gyButtonProps} from './interface'
 
-class Button extends React.Component<gyButtonProps,any>{
+class Button extends React.PureComponent<gyButtonProps,any>{
     static defaultProps = {
         loading: false,
         clicked:false

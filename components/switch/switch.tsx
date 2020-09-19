@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import RcSwitch from 'rc-switch';
 import {gySwitchProps} from './interface'
 
-class Switch extends React.Component<gySwitchProps> {
+class Switch extends React.PureComponent<gySwitchProps> {
     render() {
         const {className, style, size, disabled, checked} = this.props;
         const preCls = 'rc-switch';

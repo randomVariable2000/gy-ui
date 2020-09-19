@@ -7,7 +7,7 @@ import {gyIconProps, gyIconState} from './interface';
 const svgTarget = 'https://unpkg.com/ionicons@4.4.2/dist/ionicons/svg/';
 const archer = new Archer();
 
-export class Icon extends React.Component<gyIconProps, gyIconState> {
+export class Icon extends React.PureComponent<gyIconProps, gyIconState> {
     state = {
       svgHtml: ''
     };

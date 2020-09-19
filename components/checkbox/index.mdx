@@ -1,0 +1,41 @@
+---
+name: Checkbox 多选框
+route: /Checkbox
+menu: 组件
+---
+import { Playground } from 'docz'
+import Checkbox from './checkbox'
+import './style'
+import GroupDemoCode from '!raw-loader!./demo/group.tsx';
+import { HappyBox } from '../../doc-comps';
+import GroupDemo from './demo/group.tsx'
+
+# Checkbox 多选框
+
+开关
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <Checkbox/>
+</Playground>
+
+<Playground>
+    <Checkbox disabled={true}/>
+</Playground>
+
+<Playground>
+    <Checkbox indeterminate={true}/>
+</Playground>
+
+<HappyBox code={GroupDemoCode} title='' desc="按钮组">
+  <GroupDemo/>
+</HappyBox>
+
+## API
+
+| 属性 | 说明     | 类型                                         | 默认值 |
+| ---- | -------- | -------------------------------------------- | ------ |
+| kind | 警告类型 | 'info'/'positive'/'negative'/'warning'非必填 | 'info' |
