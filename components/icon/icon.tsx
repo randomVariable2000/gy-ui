@@ -7,7 +7,7 @@ import {gyIconProps, gyIconState} from './interface';
 const svgTarget = 'https://unpkg.com/ionicons@4.4.2/dist/ionicons/svg/';
 const archer = new Archer();
 
-export class Icon extends React.Component<gyIconProps, gyIconState> {
+export class Icon extends React.PureComponent<gyIconProps, gyIconState> {
     state = {
       svgHtml: ''
     };
@@ -37,7 +37,8 @@ export class Icon extends React.Component<gyIconProps, gyIconState> {
     }
 
     getSvg = async (type: string) => {
-      return await archer.fetchSvg(`${svgTarget}${type}.svg`);
+      let ret = await archer.fetchSvg(`${svgTarget}${type}.svg`);
+      return ret;
     }
   
     render() {

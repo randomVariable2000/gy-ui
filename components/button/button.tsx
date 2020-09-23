@@ -5,7 +5,7 @@ import Icon from '../icon';
 
 import {gyButtonProps} from './interface'
 
-class Button extends React.Component<gyButtonProps,any>{
+class Button extends React.PureComponent<gyButtonProps,any>{
     static defaultProps = {
         loading: false,
         clicked:false
@@ -15,11 +15,12 @@ class Button extends React.Component<gyButtonProps,any>{
         type: PropTypes.string,
         shape: PropTypes.oneOf(['circle']),
         size: PropTypes.oneOf(['large', 'default', 'small']),
-        htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
+        htmlType: PropTypes.oneOf(["submit" ,"reset" , "button" , undefined]),
         onClick: PropTypes.func,
         loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
         className: PropTypes.string,
         icon: PropTypes.string,
+        clicked: PropTypes.bool,
     };
 
     timeout?: number;
@@ -33,7 +34,7 @@ class Button extends React.Component<gyButtonProps,any>{
           }
     }
 
-    componentWillReceiveProps(nextProps: gyButtonProps) {
+    UNSAFE_componentWillReceiveProps(nextProps: gyButtonProps) {
         const currentLoading = this.props.loading;
         const loading = nextProps.loading;
    
@@ -72,12 +73,9 @@ class Button extends React.Component<gyButtonProps,any>{
 
 
     render() {
-        let {type, shape, size = '', className, htmlType, children, icon, loading,clicked,...others} = this.props;
-        
-        loading = this.state.loading;
-        clicked = this.state.clicked;
-        console.log(children, !children && icon);
-        const prefixCls = 'gy-button'
+        const {type, shape, size = '', className, htmlType, children, icon,...others} = this.props;
+        const {loading, clicked} = this.state;
+        const prefixCls = 'gy-btn'
         const classes = classNames(prefixCls, className, {
             [`${prefixCls}-${type}`]: type,
             [`${prefixCls}-${shape}`]: shape,
@@ -91,7 +89,7 @@ class Button extends React.Component<gyButtonProps,any>{
         return (
             <button
                 {...others}
-                type={htmlType || 'button'}
+                type={htmlType}
                 className = {classes}
                 onClick = {this.handleClick}
             >

@@ -5,7 +5,7 @@ export type ButtonSize = 'small' | 'large';
 
 export interface gyButtonProps {
     type?: ButtonType;
-    htmlType?: string;
+    htmlType?: "submit" | "reset" | "button" | undefined;
     icon?: string;
     shape?: ButtonShape;
     size?: ButtonSize;

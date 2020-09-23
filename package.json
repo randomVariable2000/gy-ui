@@ -26,7 +26,6 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@types/classnames": "^2.2.10",
-    "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@umijs/fabric": "^2.2.2",
     "commitizen": "^4.2.1",
@@ -39,7 +38,6 @@
     "prettier": "^2.1.2",
     "prismjs": "^1.21.0",
     "raw-loader": "^4.0.1",
-    "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
@@ -74,8 +72,12 @@
   "dependencies": {
     "archer-svgs": "^0.2.5",
     "classnames": "^2.2.6",
+    "lodash": "^4.17.20",
     "omit": "^1.0.1",
     "prop-types": "^15.7.2",
-    "rc-switch": "^3.2.1"
+    "rc-checkbox": "^2.3.1",
+    "rc-switch": "^3.2.1",
+    "react": "^16.13.1",
+    "@types/react": "^16.9.49"
   }
 }
