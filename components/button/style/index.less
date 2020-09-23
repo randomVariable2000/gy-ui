@@ -1,62 +1,19 @@
-@button-prefix-cls: gy-button;
-@primary-color: rgb(81, 178, 109); // 主色调
-@primary-color-choosed: tint(@primary-color, 90%);
-@primary-color-active: shade(@primary-color, 20%);
-@primary-color-hover: tint(@primary-color, 10%);
+@import "../../style/themes/default.less";
 
-@border-color-outline: #e3e8ee;
-@border-color: #d9d9d9;
-@border-radius-base: 2px;
-@border-radius-large: 4px;
-
-@button-border: 1px solid transparent;
-@button-border-radius: @border-radius-large;
-@button-padding: 0 15px;
-@button-margin: 0 15px;
-
-@button-border-color: @border-color;
-
-@button-danger-color: #f04134;
-@button-danger-color-active: #d73435;
-
-@button-primary-bgColor: @primary-color;
-@button-primary-hover-bgColor: @primary-color-hover;
-@button-primary-active-bgColor: @primary-color-active;
-
-@button-disabled-bgColor: #f7f7f7;
-
-@button-height-size-base: 32px;
-@button-height-size-small: 24px;
-@button-height-size-large: 40px;
-
-
-//font
-@font-size-small: 12px;
-@font-size-default: 14px;
-@font-size-large: 16px;
-@font-color-base: rgba(0, 0, 0, 0.65);
-@font-color-second: rgba(0, 0, 0, 0.45);
-@font-color-unactive: rgba(0, 0, 0, 0.25);
-
-@font-weight-base: 500;
-
-
-@transition-base: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-.@{button-prefix-cls} {
+.@{btn-prefix} {
   display: inline-block;
-  border: @button-border;
-  border-radius: @button-border-radius;
+  border: @border-width-base @border-style-base transparent;
+  border-radius: @border-radius-base;
   cursor: pointer;
   user-select: none;
   outline: none;
-  padding: @button-padding;
-  margin: @button-margin;
-  font-size: @font-size-default;
-  height: @button-height-size-base;
+  padding: @btn-padding-base ;
+  margin: @btn-margin-base;
+  font-size: @font-size-base;
+  height: @btn-height-base;
   transition: @transition-base;
   background-color: white;
-  border-color: @button-border-color;
+  border-color: @btn-default-border-color ;
 
   svg{
     width: 1em;
@@ -66,76 +23,76 @@
   }
 
   &:disabled {
-    background-color: @button-disabled-bgColor;
+    background-color: @btn-default-bg;
     cursor: not-allowed;
-    color: @button-border-color;
+    color: @btn-default-border-color;
 
     &:hover,
     &:focus {
-      border-color: @button-border-color;
-      color: @button-border-color;
+      border-color: @btn-default-border-color;
+      color: @btn-default-border-color;
     }
   }
 
   &:hover,
   &:focus {
-    border-color: @button-primary-bgColor;
-    color: @button-primary-bgColor;
+    border-color: @btn-primary-border-color;
+    color: @btn-primary-bg;
   }
 
   &:active {
-    color: @button-primary-active-bgColor;
+    color: @btn-primary-active-bgColor;
   }
 
   &-primary {
     color: white;
-    background-color: @button-primary-bgColor;
-    border-color: @button-primary-bgColor;
+    background-color: @btn-primary-bg ;
+    border-color: @btn-primary-border-color ;
 
     &:hover,
     &:focus {
-      background-color: @button-primary-hover-bgColor;
+      background-color: @btn-primary-hover-bgColor;
       color: white;
     }
 
     &:active {
-      background-color: @button-primary-active-bgColor;
+      background-color: @btn-primary-active-bgColor;
     }
   }
 
   &-dashed {
-    color: @button-primary-bgColor;
+    color: @btn-primary-bg;
     border-style: dashed;
   }
 
   &-danger {
-    background-color: @button-disabled-bgColor;
-    color: @button-danger-color;
+    background-color: @btn-disable-bg;
+    color: @btn-danger-color;
 
     &:hover,
     &:focus {
-      background-color: @button-danger-color;
-      border-color: @button-danger-color;
+      background-color: @btn-danger-color;
+      border-color: @btn-danger-color;
       color: white;
     }
 
     &:active {
-      background-color: @button-danger-color-active;
-      border-color: @button-danger-color-active;
+      background-color: @btn-danger-active-color;
+      border-color: @btn-danger-active-color;
     }
   }
 
   &-small {
     padding: 0 7px;
-    font-size: @font-size-small;
+    font-size: @font-size-sm;
     border-radius: 4px;
-    height: @button-height-size-small;
+    height: @btn-size-sm;
   }
 
   &-large {
     padding: 0 15px;
-    font-size: @font-size-default;
-    height: @button-height-size-large;
+    font-size: @font-size-base;
+    height: @btn-size-lg;
   }
 
   &-ghost {
@@ -147,18 +104,18 @@
       background-color: transparent;
     }
 
-    &.@{button-prefix-cls} {
+    &.@{btn-prefix} {
       &-primary {
-        color: @button-primary-bgColor;
+        color: @btn-primary-color;
       }
 
       &-danger {
-        color: @button-danger-color;
-        border-color: @button-danger-color;
+        color: @btn-danger-color;
+        border-color: @btn-danger-color;
 
         &:active {
-          color: @button-danger-color-active;
-          border-color: @button-danger-color-active;
+          color: @btn-danger-active-color;
+          border-color: @btn-danger-active-color;
         }
       }
     }
@@ -180,12 +137,25 @@
       width: 28px;
       height: 28px;
       padding: 0;
-      font-size: @font-size-default;
+      font-size: @font-size-base;
     }
   }
 
-  &-load {
-    animation: rotate 1s infinite linear;
+  &-loading {
+    color: white;
+    animation:loading 3s linear infinite;
+    @keyframes loading {
+      0%{
+          background-color: @btn-primary-bg;
+      }
+      50%{
+          background-color: @btn-primary-loading-bgColor;
+          border-color: @btn-primary-loading-bgColor;
+      }
+      100%{
+        background-color: @btn-primary-bg;
+      }
+    }
   }
 
   &-container {
