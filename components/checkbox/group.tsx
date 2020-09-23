@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames'
 import Checkbox from './checkbox';
-import {GyCheckboxGroupProps, GyCheckboxGroupState,GyCheckboxOptionType} from './interface'
+import {gyCheckboxGroupProps, gyCheckboxGroupState,gyCheckboxOptionType} from './interface'
 
-class CheckboxGroup extends React.PureComponent<GyCheckboxGroupProps, GyCheckboxGroupState> {
+class CheckboxGroup extends React.PureComponent<gyCheckboxGroupProps, gyCheckboxGroupState> {
     static defaultProps = {
         prefixCls : 'gy-checkbox',
         options: []
@@ -16,7 +16,7 @@ class CheckboxGroup extends React.PureComponent<GyCheckboxGroupProps, GyCheckbox
         }
     }
 
-    getChildContext = () => {
+    getChildContext(){
         return {
             checkboxGroup:{
                 toggleOption: this.toggleOption,
@@ -34,14 +34,14 @@ class CheckboxGroup extends React.PureComponent<GyCheckboxGroupProps, GyCheckbox
         }
     }
 
-    getOptions = () =>{
+    getOptions(){
         const {options} = this.props;
-        return (options as Array<GyCheckboxOptionType>).map(option => {
+        return (options as Array<gyCheckboxOptionType>).map(option => {
             if(typeof option === 'string'){
                 return {
                     label: option,
                     value: option,
-                } as GyCheckboxOptionType;
+                } as gyCheckboxOptionType;
             }
             return option;
         })
@@ -84,7 +84,7 @@ class CheckboxGroup extends React.PureComponent<GyCheckboxGroupProps, GyCheckbox
             </Checkbox>
           ));
         }
-        const classString = classNames(className);
+        const classString = classNames(prefixCls, className);
         return (
           <div className={classString}>
             {children}

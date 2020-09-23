@@ -1,4 +1,4 @@
-export interface GyAbstractCheckboxProps {
+export interface gyAbstractCheckboxProps {
   prefixCls?: string;
   className?: string;
   defaultChecked?: boolean;
@@ -11,35 +11,34 @@ export interface GyAbstractCheckboxProps {
   value?: any;
   name?: string;
   children?: React.ReactNode;
-  id?:string;
 }
 
-export interface GyCheckboxProps extends GyAbstractCheckboxProps {
+export interface gyCheckboxProps extends gyAbstractCheckboxProps {
   indeterminate?: boolean;
 }
 
-export interface GyCheckboxOptionType {
+export interface gyCheckboxOptionType {
   label: string;
-  value: GyCheckboxValueType;
+  value: gyCheckboxValueType;
   disabled?: boolean;
 }
 
-export type GyCheckboxValueType = string | number;
+export type gyCheckboxValueType = string | number;
 
-export interface GyAbstractCheckboxGroupProps {
+export interface gyAbstractCheckboxGroupProps {
   prefixCls?: string;
   className?: string;
-  options?: Array<GyCheckboxOptionType | string>;
+  options?: Array<gyCheckboxOptionType | string>;
   disabled?: boolean;
   style?: React.CSSProperties;
 }
 
-export interface GyCheckboxGroupProps extends GyAbstractCheckboxGroupProps {
-  defaultValue?: Array<GyCheckboxValueType>;
-  value?: Array<GyCheckboxValueType>;
-  onChange?: (checkedValue: Array<GyCheckboxValueType>) => void;
+export interface gyCheckboxGroupProps extends gyAbstractCheckboxGroupProps {
+  defaultValue?: Array<gyCheckboxValueType>;
+  value?: Array<gyCheckboxValueType>;
+  onChange?: (checkedValue: Array<gyCheckboxValueType>) => void;
 }
 
-export interface GyCheckboxGroupState {
+export interface gyCheckboxGroupState {
   value: any;
 }

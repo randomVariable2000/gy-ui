@@ -76,7 +76,11 @@
     "omit": "^1.0.1",
     "prop-types": "^15.7.2",
     "rc-checkbox": "^2.3.1",
+<<<<<<< HEAD
     "rc-switch": "^3.2.1",
     "react": "^16.13.1"
+=======
+    "rc-switch": "^3.2.1"
+>>>>>>> 1a9a496f42828a954dfa37f3b6d1e64ad45cdedf
   }
 }

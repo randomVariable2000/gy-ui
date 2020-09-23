@@ -2,16 +2,16 @@ import React from 'react';
 import classNames from 'classnames'
 import RcCheckbox from 'rc-checkbox';
 import CheckboxGroup from './group'
-import {GyCheckboxProps} from './interface'
+import {gyCheckboxProps,gyCheckboxGroupProps} from './interface'
 
-class Checkbox extends React.PureComponent<GyCheckboxProps> {
+class Checkbox extends React.PureComponent<gyCheckboxProps> {
 
     static Group: typeof CheckboxGroup;
     static defaultProps = {
       prefixCls: 'gy-checkbox',
       indeterminate: false,
     };
-
+  
     render() {
       const { props, context } = this;
       const {
@@ -24,8 +24,9 @@ class Checkbox extends React.PureComponent<GyCheckboxProps> {
         onMouseLeave,
         ...restProps
       } = props;
+      console.log(context);
       const { checkboxGroup } = context;
-      let checkboxProps: GyCheckboxProps = { ...restProps };
+      let checkboxProps: gyCheckboxProps = { ...restProps };
       if (checkboxGroup) {
         checkboxProps.onChange = () => checkboxGroup.toggleOption({ label: children, value: props.value });
         checkboxProps.checked = checkboxGroup.value.indexOf(props.value) !== -1;
