@@ -1,0 +1,73 @@
+---
+name: InputNumber 数字选择器
+route: /InputNumber
+menu: 组件
+---
+import { Playground } from 'docz'
+import InputNumber from './inputnumber'
+import './style'
+
+# InputNumber 数字选择器
+
+数字选择器
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <InputNumber/>
+</Playground>
+
+<Playground>
+    <InputNumber step={0.1} max={2} min={-2} inputValue={0.1}/>
+</Playground>
+
+<Playground>
+    <InputNumber
+    	min={10} 
+    	max={100}
+    	formatter={value => `${value.toString().replace(/%/g,'')}%`}
+    	parser={value=>value.replace('%','')}
+	/>
+</Playground>
+
+<Playground>
+    <InputNumber disabled/>
+</Playground>
+
+<Playground>
+      <InputNumber
+      min={10} 
+      max={100}
+      inputValue={1111}
+  />
+</Playground>
+
+<Playground>
+	<InputNumber
+	  max={100000000000}
+	  min={-100000000000}
+      inputValue={1000}
+      formatter={value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+      parser={value => value.replace(/\$\s?|(,*)/g, '')}
+      onChange={(value)=>{console.log(value)}}
+	/>
+</Playground>
+
+<Playground>
+  <InputNumber size="small"/>
+  <InputNumber size="default"/>
+  <InputNumber size="large"/>
+</Playground>
+
+## API
+
+| 属性 | 说明     | 类型                                         | 默认值 |
+| ---- | -------- | -------------------------------------------- | ------ |
+| kind | 警告类型 | 'info'/'positive'/'negative'/'warning'非必填 | 'info' |
+
+## 难点
+* 聚焦与失焦时对输入内容的处理
+* 添加了格式化和解析函数参数后，对输入的处理
+* 分了两个变量-inputValue和value，当聚焦时，使用inputValue，当失焦时，需对输入进行矫正，并改变value。value有存储的作用。
