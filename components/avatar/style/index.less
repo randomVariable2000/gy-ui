@@ -1,0 +1,83 @@
+@import '../../style/themes/default.less';
+
+.@{avatar-prefix} {
+  display: inline-block;
+  text-align: center;
+  background-color: @avatar-bgColor-default;
+  margin: @avatar-margin;
+
+  &-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &-square {
+    border-radius: @avatar-square-radius;
+
+    img {
+      border-radius: @avatar-square-radius;
+    }
+  }
+}
+
+.@{avatar-prefix}-default {
+	width: @avatar-size-default;
+	height: @avatar-size-default;
+	line-height: @avatar-size-default;
+	padding: @avatar-padding;
+
+	img {
+    border-radius:50%;
+		width: @avatar-size-default;
+		height: @avatar-size-default;
+	}
+  .@{avatar-prefix}-icon {
+    font-size: @avatar-size-default;
+  }
+  .@{icon-prefix}{
+    font-size:@avatar-size-default;
+  }
+}
+
+.@{avatar-prefix}-small {
+  width: @avatar-size-sm;
+  height: @avatar-size-sm;
+  line-height: @avatar-size-sm;
+  padding: @avatar-padding;
+
+  img {
+  	border-radius:50%;
+    width: @avatar-size-sm;
+    height: @avatar-size-sm;
+  }
+  .@{avatar-prefix}-icon {
+    font-size: @avatar-size-sm;
+  }
+
+  .@{icon-prefix}{
+    font-size:@avatar-size-sm;
+  }
+}
+
+.@{avatar-prefix}-large {
+  width: @avatar-size-lg;
+  height: @avatar-size-lg;
+  line-height: @avatar-size-lg;
+  padding: @avatar-padding;
+
+  img {
+  	border-radius:50%;
+    width: @avatar-size-lg;
+    height: @avatar-size-lg;
+  }
+  .@{avatar-prefix}-icon {
+    font-size: @avatar-size-lg;
+  }
+  .@{icon-prefix}{
+    font-size:@avatar-size-lg;
+  }
+}
+
+.@{avatar-prefix}-icon {
+  fill: currentColor;
+}

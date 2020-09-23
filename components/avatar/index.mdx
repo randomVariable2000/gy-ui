@@ -1,0 +1,45 @@
+---
+name: Avatar 头像
+route: /Avatar
+menu: 组件
+---
+import { Playground } from 'docz'
+import Avatar from './avatar'
+import Icon from '../icon'
+import './style'
+
+# Avatar 头像
+
+头像
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <Avatar/>
+</Playground>
+
+<Playground>
+    <Avatar size="small"/>
+    <Avatar size="large"/>
+</Playground>
+
+<Playground>
+    <Avatar shape="square" style={{backgroundColor:"black"}}/>
+</Playground>
+
+<Playground>
+    <Avatar icon={<Icon type="ios-add" style={{color: "black"}}/>}/>
+</Playground>
+
+<Playground>
+	<Avatar src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2023734532,1771130044&fm=15&gp=0.jpg" />
+</Playground>
+
+
+## API
+
+| 属性 | 说明     | 类型                                         | 默认值 |
+| ---- | -------- | -------------------------------------------- | ------ |
+| kind | 警告类型 | 'info'/'positive'/'negative'/'warning'非必填 | 'info' |
