@@ -19,15 +19,11 @@ import GroupDemo from './demo/group.tsx'
 ### 基本用法
 
 <Playground>
-    <Checkbox/>
+    <Checkbox onMouseEnter={()=>{console.log('enter')}}/>
 </Playground>
 
 <Playground>
     <Checkbox disabled={true}/>
-</Playground>
-
-<Playground>
-    <Checkbox indeterminate={true}/>
 </Playground>
 
 <HappyBox code={GroupDemoCode} title='' desc="按钮组">
