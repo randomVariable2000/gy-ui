@@ -1,0 +1,47 @@
+---
+name: Input 输入框
+route: /Input
+menu: 组件
+---
+import { Playground, Props} from 'docz'
+import Input from './input'
+import Icon from '../icon'
+import './style'
+
+# Input 输入框
+
+输入框
+
+## 代码演示
+
+### 基本用法
+
+<Playground>
+    <Input />
+</Playground>
+
+<Playground>
+    <Input prefix="pre" suffix="suffff"/>
+</Playground>
+
+<Playground>
+    <Input addonBefore={<Icon type="md-home"/>} addonAfter={<Icon type="ios-arrow-down"/>}/>
+</Playground>
+
+
+<Playground>
+    <Input.Search />
+</Playground>
+
+<Playground>
+    <Input size="small"/>
+    <Input size="large"/>
+</Playground>
+
+<Playground>
+    <Input disabled/>
+</Playground>
+
+## API
+
+<Props of={Input} />
