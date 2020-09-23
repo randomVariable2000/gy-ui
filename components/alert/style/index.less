@@ -1,8 +1,19 @@
-@popupPrefix: gy-alert;
+@import "../../style/themes/default.less";
 
-.@{popupPrefix} {
-  padding: 20px;
-  background: white;
-  border-radius: 3px;
-  color: white;
+.@{alert-prefix}{
+  &-info{
+    background-color: @primary-color;
+  }
+
+  &-positive{
+    background-color: @positive-color;
+  }
+
+  &-negative{
+    background-color: @negative-color;
+  }
+
+  &-warning{
+    background-color: @warning-color;
+  }
 }
