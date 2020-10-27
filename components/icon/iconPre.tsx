@@ -50,7 +50,7 @@ export default class IconPre extends React.Component {
                                                     padding: 5,
                                                 }}
                                             >
-                                                <Icon type={icon} style={{ fontSize: 25 }} />
+                                                <Icon type={icon} style={{ fontSize: 25, color:'#e64a19'}} />
                                                 <div style={{ fontSize: 12 }}>{icon}</div>
                                             </div>
                                         );

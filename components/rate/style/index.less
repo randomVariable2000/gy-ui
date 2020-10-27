@@ -1,0 +1,42 @@
+@import '../../style/themes/default.less';
+@import '../../icon/style/';
+
+.@{rate-prefix} {
+  &-item {
+    transition: @transition-base;
+    display: inline-block;
+    position: relative;
+    margin: 0 2px;
+    cursor: pointer;
+    user-select: none;
+
+    span {
+      color: @color-unactive;
+    }
+
+    div {
+      display: inline-block;
+    }
+
+    .@{rate-prefix}-first-child {
+    }
+
+    .@{rate-prefix}-last-child {
+      width: 50%;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &-hover {
+    span  {
+      color: @primary-color;
+    }
+  }
+}

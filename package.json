@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
     "dev": "docz dev",
     "start": "npm run dev",
     "build:doc": "rimraf doc-site && docz build",
+    "build:types": "tsc -p tsconfig.build.json && cpr lib esm",
     "preview:doc": "docz serve"
   },
   "repository": {
@@ -23,6 +25,12 @@
   },
   "homepage": "https://github.com/randomVariable2000/gy-ui#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@types/classnames": "^2.2.10",
@@ -32,6 +40,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "docz": "^2.3.1",
     "gatsby-plugin-less": "^4.0.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "less": "^3.12.2",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
@@ -69,6 +79,7 @@
     }
   },
   "dependencies": {
+    "@babel/runtime": "^7.11.2",
     "@types/react": "^16.9.49",
     "archer-svgs": "^0.2.5",
     "classnames": "^2.2.6",
@@ -76,11 +87,7 @@
     "omit": "^1.0.1",
     "prop-types": "^15.7.2",
     "rc-checkbox": "^2.3.1",
-<<<<<<< HEAD
     "rc-switch": "^3.2.1",
     "react": "^16.13.1"
-=======
-    "rc-switch": "^3.2.1"
->>>>>>> 1a9a496f42828a954dfa37f3b6d1e64ad45cdedf
   }
 }
